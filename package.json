@@ -1,0 +1,52 @@
+{
+  "title": "jQuery Mobile Seed by Aparecium Labs",
+  "name": "jquery-mobile-seed",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A quick start kit for jQuery Mobile Framework based website development with SASS support",
+  "homepage": "https://github.com/apareciumlabs/jquery-mobile-seed#README.md",
+  "bugs": {
+    "url": "https://github.com/apareciumlabs/jquery-mobile-seed/issues",
+    "email": "opensource@apareciumalabs.com"
+  },
+  "license": "MIT",
+  "author": "Brion Mario",
+  "contributors": [
+    {
+      "name": "Brion Mario",
+      "email": "brion@apareciumlabs.com",
+      "url": "https://github.com/brionmario"
+    }
+  ],
+  "engines": {
+    "node": ">=8.9.1 <9.0.0",
+    "yarn": ">=1.3.2 <2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apareciumlabs/jquery-mobile-seed"
+  },
+  "keywords": [
+    "jquery",
+    "jquery-mobile",
+    "php",
+    "html",
+    "gulp",
+    "css",
+    "sass",
+    "responsive",
+    "apareciumlabs",
+    "seed"
+  ],
+  "scripts": {
+    "gulp-dev-server": "gulp browserSync --base=.temp"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "browser-sync": "2.24.5",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+  }
+}
