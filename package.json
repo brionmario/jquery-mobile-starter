@@ -39,7 +39,22 @@
     "seed"
   ],
   "scripts": {
-    "gulp-dev-server": "gulp browserSync --base=.temp"
+    "build:dev": "npm run clean:temp && gulp build --env=development",
+    "build:prod": "npm run clean:dist && gulp build --env=production",
+    "build": "npm run build:dev",
+    "clean:temp": "gulp clean --env=development",
+    "clean:dist": "gulp clean --env=production",
+    "clean": "gulp clean --env=all",
+    "gulp-dev-server": "gulp browserSync --base=.temp",
+    "lint:scripts": "gulp scripts:lint; exit 0",
+    "lint:styles": "gulp styles:lint",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "server:dev": "npm run build:dev && gulp serve:dev",
+    "server:prod": "npm run build:prod && http-server dist -a 192.168.8.101 -o",
+    "server": "npm run server:dev",
+    "start": "npm run server",
+    "watch:dev": "gulp watch",
+    "watch": "npm run watch:dev"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -66,6 +81,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
+    "http-server": "^0.11.1",
     "main-bower-files": "^2.13.1",
     "wiredep": "^4.0.0"
   },
