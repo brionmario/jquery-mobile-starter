@@ -317,6 +317,15 @@ gulp.task('build',
     callback();
 });
 
+gulp.task('php', (callback) => {
+  phpConnect.server({
+    base: PATHS.dev.root,
+    port: 8010,
+    keepalive: true
+  });
+  callback();
+});
+
 gulp.task('browserSync', (callback) => {
   browserSync.init({
     server: {
