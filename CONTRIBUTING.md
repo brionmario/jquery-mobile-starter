@@ -1,4 +1,4 @@
-# Contributing to Gulp Static Seed
+# Contributing to jQuery Mobile Seed
 
 As a contributor, here are the guidelines we would like you to follow:
 
