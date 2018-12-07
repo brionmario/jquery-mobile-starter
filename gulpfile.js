@@ -328,9 +328,10 @@ gulp.task('php', (callback) => {
 
 gulp.task('browserSync', (callback) => {
   browserSync.init({
-    server: {
-      baseDir: PATHS.dev.root
-    },
+    proxy: '127.0.0.1:8010',
+    port: 8080,
+    open: true,
+    notify: false
   });
   callback();
 });
