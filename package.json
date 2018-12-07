@@ -80,6 +80,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "3.9.4",
     "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
     "gulp-css-url-adjuster": "^0.2.3",
     "gulp-eslint": "^5.0.0",
     "gulp-header": "2.0.5",
