@@ -29,8 +29,8 @@
 
 # Quick Links
 
-[Demo](https://apareciumlabs-jquery-mobile-seed.netlify.com/) | [jQuery Mobile Documentation](http://demos.jquerymobile.com/1.4.5/)
-|---|---|
+[Demo](https://apareciumlabs-jquery-mobile-seed.netlify.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/)
+|---|---|---|
 
 This repository could be used by anyone who's looking for a quick starter kit for jQuery Mobile framework based website development. This boilerplate uses [Gulp](https://gulpjs.com/) for building and automating the workflow. Following are some key features we've included for you.
 
@@ -266,7 +266,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and t
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/apareciumlabs/gulp-static-seed/commits?author=brionmario "Code") [📖](https://github.com/apareciumlabs/gulp-static-seed/commits?author=brionmario "Documentation") [🐛](https://github.com/apareciumlabs/gulp-static-seed/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/apareciumlabs/gulp-static-seed/commits?author=brionmario "Tests") |
+| [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/apareciumlabs/jquery-mobile-seed/commits?author=brionmario "Code") [📖](https://github.com/apareciumlabs/jquery-mobile-seed/commits?author=brionmario "Documentation") [🐛](https://github.com/apareciumlabs/jquery-mobile-seed/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/apareciumlabs/jquery-mobile-seed/commits?author=brionmario "Tests") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
