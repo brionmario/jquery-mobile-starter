@@ -27,6 +27,11 @@
 </a>
 </p>
 
+# Quick Links
+
+[Demo](https://apareciumlabs-jquery-mobile-seed.netlify.com/) | [jQuery Mobile Documentation](http://demos.jquerymobile.com/1.4.5/)
+|---|---|
+
 This repository could be used by anyone who's looking for a quick starter kit for jQuery Mobile framework based website development. This boilerplate uses [Gulp](https://gulpjs.com/) for building and automating the workflow. Following are some key features we've included for you.
 
 * The most recent version of [jQuery Mobile 1.4.5](http://demos.jquerymobile.com/1.4.5/)
@@ -38,9 +43,9 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 
 # Quick start
 
-> The generated project have dependencies that require `node` together with `npm`.
+> The generated project have dependencies that require `node` together with `npm` & `bower`.
 
-**Make sure you have Node version >= 8.0 and (NPM >= 5 or [Yarn](https://yarnpkg.com) )**
+**Make sure you have [Node](https://nodejs.org/en/download/) version >= 8.0, [npm](https://www.npmjs.com/) >= 5 or [Yarn](https://yarnpkg.com) and [Bower](https://bower.io/) >= 1.8**
 
 ```bash
 # clone our repository
@@ -49,6 +54,9 @@ git clone --depth 1 https://github.com/apareciumlabs/jquery-mobile-seed.git
 
 # change the directory
 cd jquery-mobile-seed
+
+# install the bower dependencies
+bower install
 
 # install the dependencies with npm
 npm install
@@ -120,15 +128,18 @@ jquery-mobile-seed/
 
 What you need to run this app:
 
-* The generated project have dependencies that require `node` together with `npm`.
-* Ensure you're running the latest stable versions Node and NPM.
+* The generated project have dependencies that require `node` together with `npm` & `bower`.
+* Ensure you're running the latest stable versions Node, NPM and Bower.
 
 >Make sure you have `Node` and `NPM` installed by running simple commands on the command line to see what version of each is installed.
 
 * Node - Type `node -v` on the terminal.
 * NPM -  Type `npm -v` on the terminal.
+* Bower -  Type `bower -v` on the terminal.
 
 If you do not have them installed, click [here](https://nodejs.org/en/download/) and grab the latest stable version of `node` and `npm` will be automatically installed along with it. Or if you have `brew` already installed in your local machine, execute `brew install node` command to get `node`.
+
+If you have npm installed, It's really easy to grab the latest version of Bower by executing `npm install -g bower` which will install it globally.
 
 Though the project is built on top of gulp, we've created npm scripts to run gulp tasks. So you don't have to install gulp or gulp CLI globally on your working machine.
 
@@ -136,6 +147,7 @@ Though the project is built on top of gulp, we've created npm scripts to run gul
 
 * `clone` the repository
 * `cd jquery-mobile-seed` to change the directory
+* `bower install` to install the bower dependencies
 * `npm install` to install the dependencies with npm
 
 ## Running the app
@@ -172,6 +184,7 @@ Lets say that you want to add `moment.js` to your project. Just run the command 
 ```bash
 bower install moment --save
 ```
+
 NOTE: Some packages won't work as expected and you might have to do overrides in the `bower.json` file.
 
 # Styling
@@ -181,7 +194,9 @@ If you want to add your own stylesheet, we recommend that you place it under the
 
 For example if you want to include the styles for a slider:
 1) Create a `_slider.scss` partial file in the `scss/partials` directory.
-3) In `styles.scss` add `@import 'partials/slider.scss';`
+2) In `styles.scss` add `@import 'partials/slider.scss';`
+
+For the purpose of the demo, we have overriden the native look and feel of some jQuery mobile components. Feel free to remove them by locating in partials.
 
 # Testing
 
