@@ -20,6 +20,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const wiredep = require('wiredep');
 const urlAdjuster = require('gulp-css-url-adjuster');
 const bowerlibs = require('main-bower-files');
+const phpConnect = require('gulp-connect-php');
 
 /**
  * Browser Support declaration
@@ -73,7 +74,7 @@ const PATHS = {
     styles: 'src/sass',
     pages: 'src/pages',
     components: 'src/components',
-    index: 'src/index.html',
+    index: 'src/index.php',
     assets: 'src/assets',
     fonts: 'src/assets/fonts',
     vendor: 'src/vendor',
