@@ -27,11 +27,6 @@
 </a>
 </p>
 
-# Quick Links
-
-[Demo](https://apareciumlabs-jquery-mobile-seed.netlify.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/)
-|---|---|---|
-
 This repository could be used by anyone who's looking for a quick starter kit for jQuery Mobile framework based website development. This boilerplate uses [Gulp](https://gulpjs.com/) for building and automating the workflow. Following are some key features we've included for you.
 
 * The most recent version of [jQuery Mobile 1.4.5](http://demos.jquerymobile.com/1.4.5/)
@@ -40,6 +35,11 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 * Simplified development process with npm scripts.
 * Ability to use your favorite bower packages.
 * Organized easy to use folder structure for beginners.
+
+# Quick Links
+
+[Demo](https://apareciumlabs-jquery-mobile-seed.netlify.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/)
+|---|---|---|
 
 # Quick start
 
