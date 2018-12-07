@@ -267,9 +267,10 @@ gulp.task('bundle:vendor', () => {
 
 gulp.task('inject', () => {
   let target = gulp.src([
-    PATHS.src.index,
-    `${PATHS.src.components}/**/*.{html|jade|php}`,
-    `${PATHS.src.pages}/**/*.{html|jade|php}`,
+    `${PATHS.src.root}/**/*.html`,
+    `${PATHS.src.root}/**/*.jade`,
+    `${PATHS.src.root}/**/*.php`,
+    `!${PATHS.src.vendor}/**/*`,
   ], { base: PATHS.src.root });
 
   let devSources = gulp.src(
@@ -347,7 +348,7 @@ gulp.task('watch:scripts', () => {
 
 gulp.task('watch:pages', () => {
   gulp.watch([
-    PATHS.src.index, `${PATHS.src.components}/**/*`, `${PATHS.src.pages}/**/*`
+    `${PATHS.src.root}/**/*.php`, `${PATHS.src.root}/**/*.html`, `${PATHS.src.root}/**/*.jade`,
   ], gulp.series('inject'))
     .on('change', browserSync.reload);
 });
@@ -359,4 +360,4 @@ gulp.task('watch:assets', () => {
 
 gulp.task('watch', gulp.parallel('watch:styles', 'watch:scripts', 'watch:pages', 'watch:assets'));
 
-gulp.task('serve:dev', gulp.series('browserSync', 'watch'));
+gulp.task('serve:dev', gulp.series('browserSync', 'php', 'watch'));
