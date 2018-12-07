@@ -1,5 +1,5 @@
 <p align="center">
-    <img style="display:block;text-align:center" src="./docs/jquery-mobile-seed.svg" alt="logo-text" width="600" />
+    <img style="display:block;text-align:center" src="./docs/readme-resources/jquery-mobile-seed.svg" alt="logo-text" width="600" />
     <br/>
     <h1 align="center">jQuery Mobile Seed</h1>
     <p align="center" style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development with SASS support</p>
@@ -36,11 +36,16 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 * Ability to use your favorite bower packages.
 * Organized easy to use folder structure for beginners.
 
+# Quick Links
+
+[Demo](https://apareciumlabs-jquery-mobile-seed.netlify.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/)
+|---|---|---|
+
 # Quick start
 
-> The generated project have dependencies that require `node` together with `npm`.
+> The generated project have dependencies that require `node` together with `npm` & `bower`.
 
-**Make sure you have Node version >= 8.0 and (NPM >= 5 or [Yarn](https://yarnpkg.com) )**
+**Make sure you have [Node](https://nodejs.org/en/download/) version >= 8.0, [npm](https://www.npmjs.com/) >= 5 or [Yarn](https://yarnpkg.com) and [Bower](https://bower.io/) >= 1.8**
 
 ```bash
 # clone our repository
@@ -49,6 +54,9 @@ git clone --depth 1 https://github.com/apareciumlabs/jquery-mobile-seed.git
 
 # change the directory
 cd jquery-mobile-seed
+
+# install the bower dependencies
+bower install
 
 # install the dependencies with npm
 npm install
@@ -120,15 +128,18 @@ jquery-mobile-seed/
 
 What you need to run this app:
 
-* The generated project have dependencies that require `node` together with `npm`.
-* Ensure you're running the latest stable versions Node and NPM.
+* The generated project have dependencies that require `node` together with `npm` & `bower`.
+* Ensure you're running the latest stable versions Node, NPM and Bower.
 
 >Make sure you have `Node` and `NPM` installed by running simple commands on the command line to see what version of each is installed.
 
 * Node - Type `node -v` on the terminal.
 * NPM -  Type `npm -v` on the terminal.
+* Bower -  Type `bower -v` on the terminal.
 
 If you do not have them installed, click [here](https://nodejs.org/en/download/) and grab the latest stable version of `node` and `npm` will be automatically installed along with it. Or if you have `brew` already installed in your local machine, execute `brew install node` command to get `node`.
+
+If you have npm installed, It's really easy to grab the latest version of Bower by executing `npm install -g bower` which will install it globally.
 
 Though the project is built on top of gulp, we've created npm scripts to run gulp tasks. So you don't have to install gulp or gulp CLI globally on your working machine.
 
@@ -136,6 +147,7 @@ Though the project is built on top of gulp, we've created npm scripts to run gul
 
 * `clone` the repository
 * `cd jquery-mobile-seed` to change the directory
+* `bower install` to install the bower dependencies
 * `npm install` to install the dependencies with npm
 
 ## Running the app
@@ -172,6 +184,7 @@ Lets say that you want to add `moment.js` to your project. Just run the command 
 ```bash
 bower install moment --save
 ```
+
 NOTE: Some packages won't work as expected and you might have to do overrides in the `bower.json` file.
 
 # Styling
@@ -181,7 +194,9 @@ If you want to add your own stylesheet, we recommend that you place it under the
 
 For example if you want to include the styles for a slider:
 1) Create a `_slider.scss` partial file in the `scss/partials` directory.
-3) In `styles.scss` add `@import 'partials/slider.scss';`
+2) In `styles.scss` add `@import 'partials/slider.scss';`
+
+For the purpose of the demo, we have overriden the native look and feel of some jQuery mobile components. Feel free to remove them by locating in partials.
 
 # Testing
 
@@ -251,7 +266,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and t
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/apareciumlabs/gulp-static-seed/commits?author=brionmario "Code") [📖](https://github.com/apareciumlabs/gulp-static-seed/commits?author=brionmario "Documentation") [🐛](https://github.com/apareciumlabs/gulp-static-seed/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/apareciumlabs/gulp-static-seed/commits?author=brionmario "Tests") |
+| [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/apareciumlabs/jquery-mobile-seed/commits?author=brionmario "Code") [📖](https://github.com/apareciumlabs/jquery-mobile-seed/commits?author=brionmario "Documentation") [🐛](https://github.com/apareciumlabs/jquery-mobile-seed/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/apareciumlabs/jquery-mobile-seed/commits?author=brionmario "Tests") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
