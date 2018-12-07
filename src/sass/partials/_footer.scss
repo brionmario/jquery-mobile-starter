@@ -58,3 +58,11 @@
     }
   }
 }
+
+/** JQuery Mobile Framework Overrides **/
+.footer {
+  .ui-footer {
+    border: unset !important;
+  }
+}
+
