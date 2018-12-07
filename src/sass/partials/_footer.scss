@@ -1,8 +1,9 @@
-
 .footer {
   text-align: center;
   padding: $footer-padding;
-  border-top: $footer-border-top;
+  background-color: $white !important;
+  border: none !important;
+  border-top: $footer-border-top !important;
   .footer-icons > li {
     > a {
       display: inline-block;
@@ -20,25 +21,40 @@
       &[class*="facebook"] {
         color: $facebook-icon-color;
         border-color: $facebook-icon-color;
+        &:hover {
+          color: lighten($facebook-icon-color, 10);
+        }
       }
       &[class*="twitter"] {
         color: $twitter-icon-color;
         border-color: $twitter-icon-color;
+        &:hover {
+          color: lighten($twitter-icon-color, 10);
+        }
       }
       &[class*="github"] {
         color: $github-icon-color;
         border-color: $github-icon-color;
+        &:hover {
+          color: lighten($github-icon-color, 10);
+        }
       }
     }
   }
   .copyright {
     font-size: $footer-copyright-font-size;
     img {
-      margin: 0 5px;
+      position: absolute;
     }
     p {
       color: $black;
       display: inline-block;
+      &:first-child {
+        margin-right: 5px;
+      }
+      &:last-child {
+        margin-left: 28px;
+      }
     }
   }
 }

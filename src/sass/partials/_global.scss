@@ -1,3 +1,31 @@
+/** JQuery Mobile Framework Style Overrides **/
+.ui-content {
+  padding: unset !important;
+}
+
+.ui-bar {
+  padding: unset !important;
+}
+
+.ui-bar-a {
+  border: none !important;
+}
+
+.ui-footer {
+  border: unset !important;
+}
+
+.ui-panel-display-reveal {
+  box-shadow: none !important;
+  border-right: $sidepanel-border-right !important;
+}
+
+
+/** Custom CSS **/
+.main-content {
+  background-color: $white;
+}
+
 .center-text {
   text-align: center;
 }
@@ -34,18 +62,4 @@
 }
 .font-white {
   color: $white;
-}
-.main-area{
-  position: relative;
-  height: $main-content-area-height;
-  color: $white;
-}
-.overlay{
-  background-repeat: no-repeat;
-  background-image: url(assets/img/bg.png);
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  opacity: 1;
-  visibility: inherit;
 }

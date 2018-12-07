@@ -1,8 +1,6 @@
 .right-section {
-  float: right;
-  width: 50%;
-  position: relative;
-  padding: 0 60px;
+  height: calc(100vh - 122px);
+  background-color: $white !important;
   .logo {
     position: absolute;
     top: 40px;
@@ -16,9 +14,9 @@
     padding: $right-section-content-padding;
     .title {
       color: $black;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       text-transform: uppercase;
-      .gulp-logo {
+      .jquery-mobile-logo {
         height: 85px;
         padding: 0 15px 10px 0;
       }
@@ -53,12 +51,12 @@
         width: 120px;
         text-align: center;
         position: absolute;
-        top: 0;
-        bottom: 0;
+        top: -8px;
+        height: 47px;
         right: 0;
         font-size: .9em;
         outline: 0;
-        border-radius: 0 2px 2px 0;
+        border-radius: 0 4px 4px 0;
         transition: all .3s;
         background: $secondary-color;
         color: $white;
@@ -75,14 +73,10 @@
 }
 
 .left-section {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 50%;
+  height: calc(100vh - 122px);
+  background-color: $white !important;
   .aparecium-logo-container {
     text-align: center;
-    padding-top: 20vh;
     svg {
       width: 70%;
       height: 70%;

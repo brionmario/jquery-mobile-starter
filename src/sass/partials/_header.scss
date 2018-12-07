@@ -1,5 +1,23 @@
 .header {
-  background-color: $white;
-  border-bottom: $header-border-bottom;
+  background-color: $white !important;
+  border: none !important;
+  border-bottom: $header-border-bottom !important;
   padding: $header-padding;
+  height: 50px !important;
+  a {
+    background-color: $white !important;
+    border-color: $white !important;
+    box-shadow: none !important;
+    i {
+      font-size: 1.6rem;
+    }
+  }
+  .ui-btn {
+    color: $black !important;
+    text-shadow: none !important;
+    &:active {
+      color: $black !important;
+      text-shadow: none !important;
+    }
+  }
 }
