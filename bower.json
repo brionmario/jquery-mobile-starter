@@ -32,6 +32,9 @@
     "font-awesome": "~4.4.0",
     "jquery-mobile": "https://github.com/brionmario/jquery-mobile.git#1.4.5-stable-bower"
   },
+  "resolutions": {
+    "jquery": "~1.11.1"
+  },
   "overrides": {
     "font-awesome": {
       "main": [
