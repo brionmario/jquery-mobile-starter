@@ -1,5 +1,5 @@
 <p align="center">
-    <img style="display:block;text-align:center" src="./docs/jquery-mobile-seed.svg" alt="logo-text" width="600" />
+    <img style="display:block;text-align:center" src="./docs/readme-resources/jquery-mobile-seed.svg" alt="logo-text" width="600" />
     <br/>
     <h1 align="center">jQuery Mobile Seed</h1>
     <p align="center" style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development with SASS support</p>
