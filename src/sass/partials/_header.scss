@@ -3,7 +3,7 @@
   border: none !important;
   border-bottom: $header-border-bottom !important;
   padding: $header-padding;
-  height: 50px !important;
+  height: $header-height !important;
   a {
     background-color: $white !important;
     border-color: $white !important;
@@ -12,6 +12,10 @@
       font-size: 1.6rem;
     }
   }
+}
+
+/** JQuery Mobile Framework Overrides **/
+.header {
   .ui-btn {
     color: $black !important;
     text-shadow: none !important;

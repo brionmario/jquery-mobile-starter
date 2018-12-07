@@ -2,6 +2,7 @@
 $main-content-area-height: calc(100vh - 122px);
 
 // sections
+$section-height: calc(100vh - 122px);
 $right-section-content-padding: 40px 40px 40px 0;
 
 // footer
@@ -11,8 +12,10 @@ $footer-copyright-font-size: 10px;
 $footer-border-top: 1px solid #f0f0f0;
 
 // header
+$header-height: 50px;
 $header-border-bottom: 1px solid #f0f0f0;
 $header-padding: 10px 20px;;
 
-// Side Panel
-$sidepanel-border-right: 1px solid #f0f0f0;
+// Sidebar
+$sidebar-content-height: calc(100vh - 50px);
+$sidebar-border-right: 1px solid #f0f0f0;

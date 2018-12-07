@@ -11,10 +11,14 @@
     height: unset;
     text-align: center;
     padding: 10px;
+    .display-table {
+      display: block;
+    }
+    .display-table-cell {
+      display: block;
+    }
     .content {
-      .email-input-area {
-        margin: 25px auto 10px auto;
-      }
+      padding: 10px;
     }
   }
 }
