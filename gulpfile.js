@@ -106,11 +106,11 @@ const CONFIG = {
   },
   settings: {
     dev: {
-      proxy: '127.0.0.1',
+      proxy: '127.0.0.1:8010',
       port: 8080,
     },
     prod: {
-      proxy: '127.0.0.1',
+      proxy: '127.0.0.1:8010',
       port: 3000,
     }
   }
