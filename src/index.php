@@ -20,19 +20,8 @@
 
 <body>
 <div data-role="page">
-  <div data-role="panel" data-position="left" data-display="reveal" id="sidepanel" class="sidebar">
-    <div class="brand">
-      <a class="logo" href="http://apareciumlabs.com/" target="_blank">
-        <img src="assets/img/logo_aparecium_text_only_inverted.svg" width="150px" alt="Logo">
-      </a>
-    </div>
-    <div class="sidebar-content">
-      <img src="assets/img/hints/sidebar.png" class="hint">
-    </div>
-  </div><!-- /panel -->
-  <div data-role="header" class="header">
-    <a href="#sidepanel"><i class="fa fa-bars"></i></a>
-  </div><!-- header -->
+  <?php require './sidebar.php'?><!-- /panel -->
+  <?php require './header.php'?><!-- header -->
   <div role="main" class="overlay ui-content main-content">
     <div class="ui-grid-a ui-responsive">
       <div class="ui-block-a">
@@ -96,22 +85,7 @@
       </div>
     </div><!-- /grid-a -->
   </div><!-- /content -->
-  <div data-role="footer" class="footer">
-    <ul class="footer-icons">
-      <li><a href="https://www.facebook.com/apareciumlabs/" target="_blank"><i class="fa fa-facebook-square"></i></a>
-      </li>
-      <li><a href="https://twitter.com/apareciumlabs" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-      <li><a href="https://github.com/apareciumlabs" target="_blank"><i class="fa fa-github-square"></i></a></li>
-    </ul>
-    <div class="copyright">
-      <p>&copy; Copyright
-        <script language="JavaScript" type="text/javascript">document.write(getYear())</script>
-      </p>
-      <img src="assets/img/logo_aparecium_fox_only.svg" width="20px" height="20px"/>
-      <p>Aparecium Labs. All rights reserved.</p>
-    </div>
-  </div><!--footer -->
-
+  <?php require './footer.php'?><!--footer -->
 </div><!-- page -->
 <!-- inject:js -->
 <!-- endinject -->
