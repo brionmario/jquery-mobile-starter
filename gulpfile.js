@@ -104,6 +104,16 @@ const CONFIG = {
       vendorCSS: 'vendor.bundle.css',
       styles: 'styles.bundle.css',
     }
+  },
+  settings: {
+    dev: {
+      proxy: '127.0.0.1',
+      port: 8080,
+    },
+    prod: {
+      proxy: '127.0.0.1',
+      port: 3000,
+    }
   }
 };
 
@@ -320,11 +330,11 @@ gulp.task('build',
 
 gulp.task('php', (callback) => {
   let root = PATHS.dev.root;
-  let port = 8080;
+  let port = CONFIG.settings.dev.port;
 
   if (gutil.env.env === 'production') {
     root = PATHS.build.root;
-    port = 3000;
+    port = CONFIG.settings.prod.port;
   }
 
   phpConnect.server({
@@ -336,12 +346,12 @@ gulp.task('php', (callback) => {
 });
 
 gulp.task('browserSync', (callback) => {
-  let proxy = '127.0.0.1';
-  let port = 8080;
+  let proxy = CONFIG.settings.dev.proxy;
+  let port = CONFIG.settings.dev.port;
 
   if (gutil.env.env === 'production') {
-    proxy = '192.168.8.101';
-    port = 3000;
+    proxy = CONFIG.settings.prod.proxy;
+    port = CONFIG.settings.prod.port;
   }
 
   browserSync.init({
