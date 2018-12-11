@@ -44,14 +44,14 @@ const AUTO_PREFIX_BROWSERS = [
  */
 const banner = [
   '/*! ========================================================================= *\n',
-	' *  <%= pkg.title %> \n',
-	' *  ========================================================================= *\n',
-	' *  Version: <%= pkg.version %>\n',
-	' *  Author: <%= pkg.author %>\n',
-	' *  ========================================================================= *\n',
-	' *  GitHub Repo: <%= pkg.repository.url %>\n',
-	' *  ========================================================================= *\n',
-  ' *  Copyright Ⓒ ' + (new Date()).getFullYear(),'\n',
+  ' *  <%= pkg.title %> \n',
+  ' *  ========================================================================= *\n',
+  ' *  Version: <%= pkg.version %>\n',
+  ' *  Author: <%= pkg.author %>\n',
+  ' *  ========================================================================= *\n',
+  ' *  GitHub Repo: <%= pkg.repository.url %>\n',
+  ' *  ========================================================================= *\n',
+  ' *  Copyright Ⓒ ' + (new Date()).getFullYear(), '\n',
   ' *  Licensed under <%= pkg.license %>\n',
   ' *  ========================================================================= *\n',
   ' */\n\n',
@@ -156,7 +156,7 @@ gulp.task('styles:build', () => {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe(autoprefixer({browsers: AUTO_PREFIX_BROWSERS}))
+    .pipe(autoprefixer({ browsers: AUTO_PREFIX_BROWSERS }))
     .pipe(urlAdjuster({
       prependRelative: '../',
     }))
@@ -189,7 +189,7 @@ gulp.task('styles:lint', function () {
         formatter: 'stylish',
         'merge-default-rules': false
       },
-      files: {ignore: 'node_modules/!**!/!*.s+(a|c)ss'},
+      files: { ignore: 'node_modules/!**!/!*.s+(a|c)ss' },
       rules: {
         'no-ids': 1,
         'no-mergeable-selectors': 0
@@ -228,7 +228,7 @@ gulp.task('move:vendor:fonts', () => {
     .pipe(gutil.env.env === 'production'
       ? gulp.dest(PATHS.build.fonts)
       : gulp.dest(PATHS.dev.fonts)
-  );
+    );
 });
 
 gulp.task('bundle:vendor', () => {
@@ -256,7 +256,7 @@ gulp.task('bundle:vendor', () => {
         ? CONFIG.filenames.build.vendorCSS
         : CONFIG.filenames.dev.vendorCSS))
         .pipe(urlAdjuster({
-          replace:  ['../fonts','../assets/fonts'],
+          replace: ['../fonts', '../assets/fonts'],
         }))
         .pipe(gutil.env.env === 'production'
           ? gulp.dest(PATHS.build.styles)
@@ -287,7 +287,7 @@ gulp.task('inject', () => {
 
   let prodSources = gulp.src(
     [`${PATHS.build.scripts}/**/*.js`, `${PATHS.build.styles}/**/*.css`, `!${PATHS.build.scripts}/**/*.test.js`,],
-    {read: false}
+    { read: false }
   );
 
   let prodInjectionOptions = {
@@ -316,21 +316,37 @@ gulp.task('build',
     'move:assets', 'move:vendor:fonts', gulp.parallel('scripts:build', 'styles:build'), 'bundle:vendor', 'inject'
   ), (callback) => {
     callback();
-});
+  });
 
 gulp.task('php', (callback) => {
+  let root = PATHS.dev.root;
+  let port = 8080;
+
+  if (gutil.env.env === 'production') {
+    root = PATHS.build.root;
+    port = 3000;
+  }
+
   phpConnect.server({
-    base: PATHS.dev.root,
-    port: 8010,
+    base: root,
+    port: port,
     keepalive: true
   });
   callback();
 });
 
 gulp.task('browserSync', (callback) => {
+  let proxy = '127.0.0.1';
+  let port = 8080;
+
+  if (gutil.env.env === 'production') {
+    proxy = '192.168.8.101';
+    port = 3000;
+  }
+
   browserSync.init({
-    proxy: '127.0.0.1:8010',
-    port: 8080,
+    proxy: proxy,
+    port: port,
     open: true,
     notify: false
   });
@@ -360,4 +376,4 @@ gulp.task('watch:assets', () => {
 
 gulp.task('watch', gulp.parallel('watch:styles', 'watch:scripts', 'watch:pages', 'watch:assets'));
 
-gulp.task('serve:dev', gulp.series('browserSync', 'php', 'watch'));
+gulp.task('serve', gulp.series('browserSync', 'php', 'watch'));
