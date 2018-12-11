@@ -58,38 +58,6 @@ const banner = [
   ''
 ].join('');
 
-const PATHS = {
-  dev: {
-    root: '.temp',
-    scripts: '.temp/js',
-    styles: '.temp/css',
-    pages: '.temp/pages',
-    components: '.temp/components',
-    assets: '.temp/assets',
-    fonts: '.temp/assets/fonts',
-  },
-  src: {
-    root: 'src',
-    scripts: 'src/scripts',
-    styles: 'src/sass',
-    pages: 'src/pages',
-    components: 'src/components',
-    index: 'src/index.php',
-    assets: 'src/assets',
-    fonts: 'src/assets/fonts',
-    vendor: 'src/vendor',
-  },
-  build: {
-    root: 'dist',
-    scripts: 'dist/js',
-    styles: 'dist/css',
-    pages: 'dist/pages',
-    assets: 'dist/assets',
-    fonts: 'dist/assets/fonts',
-    components: 'dist/components',
-  },
-};
-
 const CONFIG = {
   filenames: {
     dev: {
@@ -98,11 +66,42 @@ const CONFIG = {
       vendorCSS: 'vendor.css',
       styles: 'styles.css',
     },
-    build: {
+    prod: {
       scripts: 'main.bundle.js',
       vendorJS: 'vendor.bundle.js',
       vendorCSS: 'vendor.bundle.css',
       styles: 'styles.bundle.css',
+    }
+  },
+  paths: {
+    dev: {
+      root: '.temp',
+      scripts: '.temp/js',
+      styles: '.temp/css',
+      pages: '.temp/pages',
+      components: '.temp/components',
+      assets: '.temp/assets',
+      fonts: '.temp/assets/fonts',
+    },
+    src: {
+      root: 'src',
+      scripts: 'src/scripts',
+      styles: 'src/sass',
+      pages: 'src/pages',
+      components: 'src/components',
+      index: 'src/index.php',
+      assets: 'src/assets',
+      fonts: 'src/assets/fonts',
+      vendor: 'src/vendor',
+    },
+    prod: {
+      root: 'dist',
+      scripts: 'dist/js',
+      styles: 'dist/css',
+      pages: 'dist/pages',
+      assets: 'dist/assets',
+      fonts: 'dist/assets/fonts',
+      components: 'dist/components',
     }
   },
   settings: {
@@ -119,8 +118,8 @@ const CONFIG = {
 
 gulp.task('scripts:build', () => {
   return gulp.src([
-    `${PATHS.src.scripts}/**/*.js`,
-    `!${PATHS.src.scripts}/**/*.test.js`,
+    `${CONFIG.paths.src.scripts}/**/*.js`,
+    `!${CONFIG.paths.src.scripts}/**/*.test.js`,
   ])
     .pipe(gutil.env.env === 'production'
       ? gutil.noop()
@@ -132,7 +131,7 @@ gulp.task('scripts:build', () => {
       ? gutil.noop()
       : sourcemaps.write())
     .pipe(gutil.env.env === 'production'
-      ? concat(CONFIG.filenames.build.scripts)
+      ? concat(CONFIG.filenames.prod.scripts)
       : concat(CONFIG.filenames.dev.scripts))
     .pipe(gutil.env.env === 'production'
       ? uglify()
@@ -148,18 +147,18 @@ gulp.task('scripts:build', () => {
       })
       : gutil.noop())
     .pipe(gutil.env.env === 'production'
-      ? gulp.dest(`${PATHS.build.scripts}`)
-      : gulp.dest(`${PATHS.dev.scripts}`))
+      ? gulp.dest(`${CONFIG.paths.prod.scripts}`)
+      : gulp.dest(`${CONFIG.paths.dev.scripts}`))
 });
 
 gulp.task('scripts:lint', () => {
-  return gulp.src(`${PATHS.src.scripts}/**/*.js`)
+  return gulp.src(`${CONFIG.paths.src.scripts}/**/*.js`)
     .pipe(eslint())
     .pipe(eslint.format())
 });
 
 gulp.task('styles:build', () => {
-  return gulp.src(`${PATHS.src.styles}/**/*.s+(a|c)ss`)
+  return gulp.src(`${CONFIG.paths.src.styles}/**/*.s+(a|c)ss`)
     .pipe(sass({
       outputStyle: 'nested',
       precision: 10,
@@ -171,7 +170,7 @@ gulp.task('styles:build', () => {
       prependRelative: '../',
     }))
     .pipe(gutil.env.env === 'production'
-      ? concat(CONFIG.filenames.build.styles)
+      ? concat(CONFIG.filenames.prod.styles)
       : concat(CONFIG.filenames.dev.styles))
     .pipe(gutil.env.env === 'production'
       ? header(banner, {
@@ -187,13 +186,13 @@ gulp.task('styles:build', () => {
       })
       : gutil.noop())
     .pipe(gutil.env.env === 'production'
-      ? gulp.dest(PATHS.build.styles)
-      : gulp.dest(PATHS.dev.styles))
+      ? gulp.dest(CONFIG.paths.prod.styles)
+      : gulp.dest(CONFIG.paths.dev.styles))
     .pipe(browserSync.stream());
 });
 
 gulp.task('styles:lint', function () {
-  return gulp.src(`${PATHS.src.root}/**/*.s+(a|c)ss`)
+  return gulp.src(`${CONFIG.paths.src.root}/**/*.s+(a|c)ss`)
     .pipe(sassLint({
       options: {
         formatter: 'stylish',
@@ -211,42 +210,42 @@ gulp.task('styles:lint', function () {
 
 gulp.task('clean', () => {
   if (gutil.env.env === 'production') {
-    return del(PATHS.build.root);
+    return del(CONFIG.paths.prod.root);
   } else if (gutil.env.env === 'development') {
-    return del(PATHS.dev.root);
+    return del(CONFIG.paths.dev.root);
   } else if (gutil.env.env === 'all') {
-    return del([PATHS.dev.root, PATHS.build.root])
+    return del([CONFIG.paths.dev.root, CONFIG.paths.prod.root])
   } else {
-    return del([PATHS.dev.root, PATHS.build.root])
+    return del([CONFIG.paths.dev.root, CONFIG.paths.prod.root])
   }
 });
 
 gulp.task('move:assets', () => {
   return gulp.src([
-    `${PATHS.src.assets}/**/*`,
-  ], { base: PATHS.src.root })
+    `${CONFIG.paths.src.assets}/**/*`,
+  ], { base: CONFIG.paths.src.root })
     .pipe(gutil.env.env === 'production'
       ? imagemin()
       : gutil.noop())
     .pipe(gutil.env.env === 'production'
-      ? gulp.dest(PATHS.build.root)
-      : gulp.dest(PATHS.dev.root))
+      ? gulp.dest(CONFIG.paths.prod.root)
+      : gulp.dest(CONFIG.paths.dev.root))
 });
 
 gulp.task('move:vendor:fonts', () => {
   return gulp.src(bowerlibs('**/*.{eot,svg,ttf,woff,woff2}'))
     .pipe(gutil.env.env === 'production'
-      ? gulp.dest(PATHS.build.fonts)
-      : gulp.dest(PATHS.dev.fonts)
+      ? gulp.dest(CONFIG.paths.prod.fonts)
+      : gulp.dest(CONFIG.paths.dev.fonts)
     );
 });
 
 gulp.task('bundle:vendor', () => {
   let target = gulp.src([
-    PATHS.src.index,
-    `${PATHS.src.components}/**/*.{html|jade|php}`,
-    `${PATHS.src.pages}/**/*.{html|jade|php}`,
-  ], { base: PATHS.src.root });
+    CONFIG.paths.src.index,
+    `${CONFIG.paths.src.components}/**/*.{html|jade|php}`,
+    `${CONFIG.paths.src.pages}/**/*.{html|jade|php}`,
+  ], { base: CONFIG.paths.src.root });
 
   let js = gulp.src(wiredep().js);
   let css = gulp.src(wiredep().css);
@@ -254,54 +253,54 @@ gulp.task('bundle:vendor', () => {
   return target
     .pipe(
       inject(js.pipe(concat(gutil.env.env === 'production'
-        ? CONFIG.filenames.build.vendorJS
+        ? CONFIG.filenames.prod.vendorJS
         : CONFIG.filenames.dev.vendorJS))
         .pipe(gutil.env.env === 'production'
-          ? gulp.dest(PATHS.build.scripts)
-          : gulp.dest(PATHS.dev.scripts))
+          ? gulp.dest(CONFIG.paths.prod.scripts)
+          : gulp.dest(CONFIG.paths.dev.scripts))
       )
     )
     .pipe(
       inject(css.pipe(concat(gutil.env.env === 'production'
-        ? CONFIG.filenames.build.vendorCSS
+        ? CONFIG.filenames.prod.vendorCSS
         : CONFIG.filenames.dev.vendorCSS))
         .pipe(urlAdjuster({
           replace: ['../fonts', '../assets/fonts'],
         }))
         .pipe(gutil.env.env === 'production'
-          ? gulp.dest(PATHS.build.styles)
-          : gulp.dest(PATHS.dev.styles))
+          ? gulp.dest(CONFIG.paths.prod.styles)
+          : gulp.dest(CONFIG.paths.dev.styles))
       )
     )
 });
 
 gulp.task('inject', () => {
   let target = gulp.src([
-    `${PATHS.src.root}/**/*.html`,
-    `${PATHS.src.root}/**/*.jade`,
-    `${PATHS.src.root}/**/*.php`,
-    `!${PATHS.src.vendor}/**/*`,
-  ], { base: PATHS.src.root });
+    `${CONFIG.paths.src.root}/**/*.html`,
+    `${CONFIG.paths.src.root}/**/*.jade`,
+    `${CONFIG.paths.src.root}/**/*.php`,
+    `!${CONFIG.paths.src.vendor}/**/*`,
+  ], { base: CONFIG.paths.src.root });
 
   let devSources = gulp.src(
-    [`${PATHS.dev.scripts}/**/*.js`, `${PATHS.dev.styles}/**/*.css`, `!${PATHS.dev.scripts}/**/*.test.js`,],
+    [`${CONFIG.paths.dev.scripts}/**/*.js`, `${CONFIG.paths.dev.styles}/**/*.css`, `!${CONFIG.paths.dev.scripts}/**/*.test.js`,],
     {
       read: false
     }
   );
 
   let devInjectionOptions = {
-    ignorePath: PATHS.dev.root,
+    ignorePath: CONFIG.paths.dev.root,
     addRootSlash: false
   };
 
   let prodSources = gulp.src(
-    [`${PATHS.build.scripts}/**/*.js`, `${PATHS.build.styles}/**/*.css`, `!${PATHS.build.scripts}/**/*.test.js`,],
+    [`${CONFIG.paths.prod.scripts}/**/*.js`, `${CONFIG.paths.prod.styles}/**/*.css`, `!${CONFIG.paths.prod.scripts}/**/*.test.js`,],
     { read: false }
   );
 
   let prodInjectionOptions = {
-    ignorePath: PATHS.build.root,
+    ignorePath: CONFIG.paths.prod.root,
     addRootSlash: false
   };
 
@@ -317,8 +316,8 @@ gulp.task('inject', () => {
         : inject(devSources, devInjectionOptions)
     )
     .pipe(gutil.env.env === 'production'
-      ? gulp.dest(PATHS.build.root)
-      : gulp.dest(PATHS.dev.root))
+      ? gulp.dest(CONFIG.paths.prod.root)
+      : gulp.dest(CONFIG.paths.dev.root))
 });
 
 gulp.task('build',
@@ -329,11 +328,11 @@ gulp.task('build',
   });
 
 gulp.task('php', (callback) => {
-  let root = PATHS.dev.root;
+  let root = CONFIG.paths.dev.root;
   let port = CONFIG.settings.dev.port;
 
   if (gutil.env.env === 'production') {
-    root = PATHS.build.root;
+    root = CONFIG.paths.prod.root;
     port = CONFIG.settings.prod.port;
   }
 
@@ -364,23 +363,23 @@ gulp.task('browserSync', (callback) => {
 });
 
 gulp.task('watch:styles', () => {
-  gulp.watch(`${PATHS.src.styles}/**/*.s+(a|c)ss`, gulp.series('styles:build'))
+  gulp.watch(`${CONFIG.paths.src.styles}/**/*.s+(a|c)ss`, gulp.series('styles:build'))
 });
 
 gulp.task('watch:scripts', () => {
-  gulp.watch(`${PATHS.src.scripts}/**/*.js`, gulp.series('scripts:build'))
+  gulp.watch(`${CONFIG.paths.src.scripts}/**/*.js`, gulp.series('scripts:build'))
     .on('change', browserSync.reload);
 });
 
 gulp.task('watch:pages', () => {
   gulp.watch([
-    `${PATHS.src.root}/**/*.php`, `${PATHS.src.root}/**/*.html`, `${PATHS.src.root}/**/*.jade`,
+    `${CONFIG.paths.src.root}/**/*.php`, `${CONFIG.paths.src.root}/**/*.html`, `${CONFIG.paths.src.root}/**/*.jade`,
   ], gulp.series('inject'))
     .on('change', browserSync.reload);
 });
 
 gulp.task('watch:assets', () => {
-  gulp.watch(`${PATHS.src.assets}/**/*`, gulp.series('move:assets'))
+  gulp.watch(`${CONFIG.paths.src.assets}/**/*`, gulp.series('move:assets'))
     .on('change', browserSync.reload);
 });
 
