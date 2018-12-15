@@ -1,4 +1,4 @@
-const getYear = require('./global');
+import getYear from './global';
 
 test('Year should not be null', () => {
   expect(getYear()).not.toBeNull();
