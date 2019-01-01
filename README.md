@@ -97,6 +97,7 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
 ```
 jquery-mobile-seed/
  ├── coverage/                      * unit test coverage reports
+ ├── dev/                           * stores development build artifacts
  ├── dist                           * stores production build artifacts
  ├── docs/                          * contains documents and document resources
  ├── node_modules/                  * contains dependencies pulled from npm
@@ -111,7 +112,6 @@ jquery-mobile-seed/
  │   ├── composer-demo.php          * demo of the composer dependency management
  │   ├── demo.php                   * file containing the demo sorce code
  │   └── index.php                  * entry php file
- ├── temp/                          * stores development build artifacts
  ├── vendor/                        * packages pulled from composer will be stored here
  ├── .all-contributorsrc            * contains info ablout repo contributors
  ├── .babelrc                       * babel build config file
@@ -266,7 +266,7 @@ npm run lint:styles
 
 ### For Development
 
-Execute the following command to build your files in the development mode. A new folder called `temp` will be created and the artifacts will be saved there.
+Execute the following command to build your files in the development mode. A new folder called `dev` will be created and the artifacts will be saved there.
 
 ```bash
 npm run build:dev
