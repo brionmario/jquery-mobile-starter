@@ -1,5 +1,5 @@
 const getYear = () => {
-  let now = new Date;
+  let now = new Date();
   let year = now.getYear();
   if (year < 1900) {
     year += 1900;
@@ -7,4 +7,4 @@ const getYear = () => {
   return year;
 };
 
-module.exports = getYear;
+export default getYear;
