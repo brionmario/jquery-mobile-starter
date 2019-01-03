@@ -109,10 +109,12 @@ const CONFIG = {
   settings: {
     dev: {
       proxy: '127.0.0.1:8010',
+      tunnel: 8010,
       port: 8000
     },
     prod: {
       proxy: '127.0.0.1:8010',
+      tunnel: 8010,
       port: 3000
     }
   }
@@ -328,16 +330,16 @@ gulp.task('build',
 
 gulp.task('php', (callback) => {
   let root = CONFIG.paths.dev.root;
-  // let port = CONFIG.settings.dev.port;
+  let port = CONFIG.settings.dev.tunnel;
 
   if (gutil.env.env === 'production') {
     root = CONFIG.paths.prod.root;
-    port = 8010;
+    port = CONFIG.settings.prod.tunnel;
   }
 
   phpConnect.server({
     base: root,
-    port: 8010,
+    port: port,
     keepalive: true
   });
   callback();
