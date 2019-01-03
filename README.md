@@ -30,11 +30,12 @@
 This repository could be used by anyone who's looking for a quick starter kit for jQuery Mobile framework based website development. This boilerplate uses [Gulp](https://gulpjs.com/) for building and automating the workflow. Following are some key features we've included for you.
 
 * The most recent version of [jQuery Mobile 1.4.5](http://demos.jquerymobile.com/1.4.5/)
+* The ability to use html, php or jade.
 * Usage of [Sass: Syntactically Awesome Style Sheets](https://sass-lang.com/) over CSS.
 * Ready to go build system using Gulp.
 * Simplified development process with npm scripts.
 * Ability to use your favorite bower packages.
-* Organized easy to use folder structure for beginners.
+* Organized and easy to use folder structure for beginners.
 
 # Quick Links
 
@@ -91,14 +92,14 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
 jquery-mobile-seed/
  ├── docs/                          * contains documents and document resources
  ├── node_modules/                  * contains dependencies pulled from npm
- ├── src/                           * styles folder
+ ├── src/                           * source folder
  │   ├── assets/                    * static assets such as images, icons, fonts goes here
  │   ├── scss/                      * styles folder
  │   │   ├── partials/              * place all the sass partial stylesheets in this folder
  │   │   └── styles.scss            * the main stylesheet for the project which gets compiled to CSS
  │   ├── scripts/                   * custom javascript script files
  │   ├── vendor/                    * third party bower libraries will be copied here
- │   └── index.html                 * entry HTML file.
+ │   └── index.php                  * entry php file.
  ├── .all-contributorsrc            * contains info ablout repo contributors
  ├── .bowerrc                       * bower config file
  ├── .dockerignore                  * contains files that are ignored from docker
@@ -253,6 +254,7 @@ Click [here](https://apareciumlabs-jquery-mobile-seed.netlify.com/) to see the d
 # Built With
 
 <a href="https://jquerymobile.com"><img src="./docs/readme-resources/jquery-mobile.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
+<a href="http://php.net/"><img src="./docs/readme-resources/php.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
 <a href="https://www.npmjs.com/"><img src="./docs/readme-resources/npm.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
 <a href="https://bower.io/"><img src="./docs/readme-resources/bower.svg" alt="bower" height="30" /></a>&nbsp;&nbsp;
 <a href="https://sass-lang.com/"><img src="./docs/readme-resources/sass.svg" alt="sass" height="30" /></a>&nbsp;&nbsp;
