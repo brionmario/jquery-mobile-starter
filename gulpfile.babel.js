@@ -109,7 +109,7 @@ const CONFIG = {
   settings: {
     dev: {
       proxy: '127.0.0.1:8010',
-      port: 8080
+      port: 8000
     },
     prod: {
       proxy: '127.0.0.1:8010',
@@ -282,7 +282,7 @@ gulp.task('inject', () => {
   ], { base: CONFIG.paths.src.root });
 
   let devSources = gulp.src(
-    [`${CONFIG.paths.dev.scripts}/**/*.js`, `${CONFIG.paths.dev.styles}/**/*.css`, `!${CONFIG.paths.dev.scripts}/**/*.test.js` ],
+    [`${CONFIG.paths.dev.scripts}/**/*.js`, `${CONFIG.paths.dev.styles}/**/*.css`, `!${CONFIG.paths.dev.scripts}/**/*.test.js`],
     {
       read: false
     }
@@ -294,7 +294,7 @@ gulp.task('inject', () => {
   };
 
   let prodSources = gulp.src(
-    [`${CONFIG.paths.prod.scripts}/**/*.js`, `${CONFIG.paths.prod.styles}/**/*.css`, `!${CONFIG.paths.prod.scripts}/**/*.test.js` ],
+    [`${CONFIG.paths.prod.scripts}/**/*.js`, `${CONFIG.paths.prod.styles}/**/*.css`, `!${CONFIG.paths.prod.scripts}/**/*.test.js`],
     { read: false }
   );
 
@@ -328,16 +328,16 @@ gulp.task('build',
 
 gulp.task('php', (callback) => {
   let root = CONFIG.paths.dev.root;
-  let port = CONFIG.settings.dev.port;
+  // let port = CONFIG.settings.dev.port;
 
   if (gutil.env.env === 'production') {
     root = CONFIG.paths.prod.root;
-    port = CONFIG.settings.prod.port;
+    port = 8010;
   }
 
   phpConnect.server({
     base: root,
-    port: port,
+    port: 8010,
     keepalive: true
   });
   callback();
