@@ -255,7 +255,7 @@ Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
 
 <!-- Markdown snippet -->
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/brionmario/jquery-mobile-seed)
 
 # Built With
 
