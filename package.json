@@ -45,7 +45,7 @@
   "scripts": {
     "build:dev": "npm run clean:temp && gulp build --env=development",
     "build:prod": "npm run clean:dist && gulp build --env=production",
-    "build": "npm run build:dev",
+    "build": "npm run build:prod",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "clean:temp": "gulp clean --env=development",
