@@ -39,9 +39,6 @@ coverage
 *.launch
 .settings/
 
-# Deployment Files
-.netlify
-
 # Logs
 logs
 *.log

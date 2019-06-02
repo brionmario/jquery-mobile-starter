@@ -78,7 +78,7 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
   - [Add third-party dependencies](#add-third-party-dependencies)
 - [Styling](#styling)
 - [Deployment](#deployment)
-  - [Netlify](#netlify)
+  - [Heroku](#deploy-to-heroku)
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
