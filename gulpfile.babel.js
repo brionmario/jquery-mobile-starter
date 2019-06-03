@@ -64,14 +64,14 @@ const CONFIG = {
   filenames: {
     dev: {
       scripts: 'main.js',
-      vendorJS: 'vendor.js',
-      vendorCSS: 'vendor.css',
+      bowerJS: 'vendor.js',
+      bowerCSS: 'vendor.css',
       styles: 'styles.css'
     },
     prod: {
       scripts: 'main.bundle.js',
-      vendorJS: 'vendor.bundle.js',
-      vendorCSS: 'vendor.bundle.css',
+      bowerJS: 'vendor.bundle.js',
+      bowerCSS: 'vendor.bundle.css',
       styles: 'styles.bundle.css'
     }
   },
@@ -94,7 +94,7 @@ const CONFIG = {
       index: 'src/index.php',
       assets: 'src/assets',
       fonts: 'src/assets/fonts',
-      vendor: 'src/vendor'
+      bower: 'src/bower_components'
     },
     prod: {
       root: 'dist',
@@ -236,14 +236,14 @@ gulp.task('move:assets', () => {
       : gulp.dest(CONFIG.paths.dev.root));
 });
 
-gulp.task('move:vendor:fonts', () => {
+gulp.task('move:bower:fonts', () => {
   return gulp.src(bowerlibs('**/*.{eot,svg,ttf,woff,woff2}'))
     .pipe(gutil.env.env === 'production'
       ? gulp.dest(CONFIG.paths.prod.fonts)
       : gulp.dest(CONFIG.paths.dev.fonts));
 });
 
-gulp.task('bundle:vendor', () => {
+gulp.task('bundle:bower', () => {
   let target = gulp.src([
     CONFIG.paths.src.index,
     `${CONFIG.paths.src.components}/**/*.{html|jade|php}`,
@@ -256,16 +256,16 @@ gulp.task('bundle:vendor', () => {
   return target
     .pipe(
       inject(js.pipe(concat(gutil.env.env === 'production'
-        ? CONFIG.filenames.prod.vendorJS
-        : CONFIG.filenames.dev.vendorJS))
+        ? CONFIG.filenames.prod.bowerJS
+        : CONFIG.filenames.dev.bowerJS))
         .pipe(gutil.env.env === 'production'
           ? gulp.dest(CONFIG.paths.prod.scripts)
           : gulp.dest(CONFIG.paths.dev.scripts)))
     )
     .pipe(
       inject(css.pipe(concat(gutil.env.env === 'production'
-        ? CONFIG.filenames.prod.vendorCSS
-        : CONFIG.filenames.dev.vendorCSS))
+        ? CONFIG.filenames.prod.bowerCSS
+        : CONFIG.filenames.dev.bowerCSS))
         .pipe(urlAdjuster({
           replace: ['../fonts', '../assets/fonts']
         }))
@@ -280,7 +280,7 @@ gulp.task('inject', () => {
     `${CONFIG.paths.src.root}/**/*.html`,
     `${CONFIG.paths.src.root}/**/*.jade`,
     `${CONFIG.paths.src.root}/**/*.php`,
-    `!${CONFIG.paths.src.vendor}/**/*`
+    `!${CONFIG.paths.src.bower}/**/*`
   ], { base: CONFIG.paths.src.root });
 
   let devSources = gulp.src(
@@ -323,7 +323,7 @@ gulp.task('inject', () => {
 
 gulp.task('build',
   gulp.series(
-    'move:assets', 'move:vendor:fonts', gulp.parallel('scripts:build', 'styles:build'), 'bundle:vendor', 'inject'
+    'move:assets', 'move:bower:fonts', gulp.parallel('scripts:build', 'styles:build'), 'bundle:bower', 'inject'
   ), (callback) => {
     callback();
   });
