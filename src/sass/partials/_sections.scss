@@ -18,25 +18,7 @@
     .email-subscription-container {
       margin-top: 20px;
       .email-input {
-        border-radius: 2px !important;
-        padding: 5px 15px;
-        background: $porcelain;
-        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
-        border: 1px solid transparent;
-        &:focus {
-          border-color: $secondary-color;
-        }
-      }
-      .subscribe-btn {
-        border-radius: 2px;
-        transition: all .3s;
-        background: $secondary-color;
-        color: $white;
-        text-transform: uppercase;
-        text-shadow: none;
-        &:hover {
-          background: darken($secondary-color, 10);
-        }
+        padding: 10px 15px;
       }
     }
     .post-desc {
@@ -74,9 +56,6 @@
     }
     .ui-focus {
       box-shadow: unset !important;
-    }
-    .ui-corner-all {
-      border-radius: 0 !important;
     }
   }
 }
