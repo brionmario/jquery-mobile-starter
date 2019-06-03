@@ -293,12 +293,12 @@ Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
 # Built With
 
 <a href="https://jquerymobile.com"><img src="./docs/readme-resources/jquery-mobile.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
+<a href="https://getcomposer.org/"><img src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>&nbsp;&nbsp;
 <a href="http://php.net/"><img src="./docs/readme-resources/php.png" alt="npm" height="25" /></a>&nbsp;&nbsp;
 <a href="https://www.npmjs.com/"><img src="./docs/readme-resources/npm.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
 <a href="https://bower.io/"><img src="./docs/readme-resources/bower.svg" alt="bower" height="30" /></a>&nbsp;&nbsp;
 <a href="https://sass-lang.com/"><img src="./docs/readme-resources/sass.svg" alt="sass" height="30" /></a>&nbsp;&nbsp;
 <a href="https://gulpjs.com/"><img style="display:inline-block;margin: 5px 10px" src="./docs/readme-resources/gulp.svg" alt="gulp" height="30" /></a>
-<a href="https://getcomposer.org/"><img style="margin-left: 20px" src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>
 
 # Changelog
 
