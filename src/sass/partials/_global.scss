@@ -2,7 +2,7 @@
   background-color: $white;
 }
 
-.center-text {
+.text-center {
   text-align: center;
 }
 
@@ -18,22 +18,22 @@
 }
 
 ::-webkit-input-placeholder {
-  font-size: .9em;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
 ::-moz-placeholder {
-  font-size: .9em;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
 :-ms-input-placeholder {
-  font-size: .9em;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
 :-moz-placeholder {
-  font-size: .9em;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
@@ -47,17 +47,4 @@
 
 .font-white {
   color: $white;
-}
-
-/** JQuery Mobile Framework Style Overrides **/
-.ui-content {
-  padding: unset !important;
-}
-
-.ui-bar {
-  padding: unset !important;
-}
-
-.ui-bar-a {
-  border: none !important;
 }

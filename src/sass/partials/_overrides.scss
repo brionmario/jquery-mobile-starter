@@ -1,0 +1,33 @@
+/**++++++++-----------------------------------------------------------++++++++**/
+/** --------------  JQuery Mobile Framework Global Overrides  --------------- **/
+/**++++++++-----------------------------------------------------------++++++++**/
+
+.ui-content {
+  padding: unset !important;
+}
+
+.ui-bar {
+  padding: unset !important;
+}
+
+.ui-bar-a {
+  border: none !important;
+}
+
+.ui-btn {
+  text-shadow: none !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: $default-font-size;
+  text-shadow: none !important;
+  &:active {
+    text-shadow: none !important;
+  }
+}
+
+.ui-focus {
+  box-shadow: unset !important;
+}
+
+.ui-shadow-inset {
+  box-shadow: unset !important;
+}

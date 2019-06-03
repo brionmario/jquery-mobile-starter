@@ -2,7 +2,7 @@
     <img style="display:block;text-align:center" src="./docs/readme-resources/jquery-mobile-seed.svg" alt="logo-text" width="600" />
     <br/>
     <h1 align="center">jQuery Mobile Seed</h1>
-    <p align="center" style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development with SASS support</p>
+    <p align="center" style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development</p>
 </p>
 
 <!-- Badges -->
@@ -34,6 +34,7 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 - Usage of [Sass: Syntactically Awesome Style Sheets](https://sass-lang.com/) over CSS.
 - Ready to go build system using Gulp.
 - Simplified development process with npm scripts.
+- Easilily integrate your favourite php libraries using [Composer](https://getcomposer.org/).
 - Ability to use your favorite bower packages.
 - Organized and easy to use folder structure for beginners.
 
@@ -45,7 +46,9 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 
 # Quick start
 
-> The generated project have dependencies that require `node` together with `npm`.
+> The generated project have dependencies that require `Node.js` together with `npm` & `Composer`.
+
+**Install [Composer](https://getcomposer.org/) locally or globally by following the instructions listed [here](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).**
 
 **Make sure you have [Node](https://nodejs.org/en/download/) version >= 8.0 and [npm](https://www.npmjs.com/) >= 5 or [Yarn](https://yarnpkg.com).**
 
@@ -57,8 +60,11 @@ git clone --depth 1 https://github.com/brionmario/jquery-mobile-seed.git
 # change the directory
 cd jquery-mobile-seed
 
-# install the dependencies with npm
+# install the npm dependencies listed on package.json
 npm install
+
+# install the composer dependencies listed on composer.json
+Composer install
 
 # start the development server
 npm start
@@ -76,6 +82,8 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
   - [Running the app](#running-the-app)
 - [Configuration](#configuration)
   - [Add third-party dependencies](#add-third-party-dependencies)
+    - [Composer](#composer)
+    - [Bower](#bower)
 - [Styling](#styling)
 - [Deployment](#deployment)
   - [Heroku](#deploy-to-heroku)
@@ -88,7 +96,7 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
 
 ```
 jquery-mobile-seed/
- ├── temp/                          * stores development build artifacts
+ ├── coverage/                      * unit test coverage reports
  ├── dist                           * stores production build artifacts
  ├── docs/                          * contains documents and document resources
  ├── node_modules/                  * contains dependencies pulled from npm
@@ -99,8 +107,12 @@ jquery-mobile-seed/
  │   │   ├── partials/              * place all the sass partial stylesheets in this folder
  │   │   └── styles.scss            * the main stylesheet for the project which gets compiled to CSS
  │   ├── scripts/                   * custom javascript script files
- │   ├── vendor/                    * third party bower libraries will be copied here
+ │   ├── bower_components/          * third party bower libraries will be copied here
+ │   ├── composer-demo.php          * demo of the composer dependency management
+ │   ├── demo.php                   * file containing the demo sorce code
  │   └── index.php                  * entry php file
+ ├── temp/                          * stores development build artifacts
+ ├── vendor/                        * packages pulled from composer will be stored here
  ├── .all-contributorsrc            * contains info ablout repo contributors
  ├── .babelrc                       * babel build config file
  ├── .bowerrc                       * bower config file
@@ -135,15 +147,17 @@ jquery-mobile-seed/
 
 What you need to run this app:
 
-- The generated project have dependencies that require `node` together with `npm`.
-- Ensure you're running the latest stable versions `node` and `npm`.
+- The generated project have dependencies that require `Node.js` together with `npm` and `Composer`.
 
-> Make sure you have `node` and `npm` installed by running simple commands on the command line to see what version of each is installed.
+> Make sure you have `Node.js`, `npm` & `Composer` installed by running simple commands on the command line and see if you're running the latest stable versions.
 
-- Node - Type `node -v` on the terminal.
-- NPM - Type `npm -v` on the terminal.
+- Node.js - Type `node -v` on the terminal.
+- npm - Type `npm -v` on the terminal.
+- Composer - Type `Composer -v` on the terminal.
 
-If you do not have them installed, click [here](https://nodejs.org/en/download/) and grab the latest stable version of `node` and `npm` will be automatically installed along with it. Or if you have `brew` already installed in your local machine, execute `brew install node` command to get `node`.
+If you do not have them installed, click [here](https://nodejs.org/en/download/) and grab the latest stable version of `Node.js` and `npm` will be automatically installed along with it. Or if you have `brew` already installed in your local machine, execute `brew install node` command to get `node`.
+
+To download composer, click [here](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos) and follow the download instructions.
 
 The project requires `bower` to install project scope dependencies such as `bootstrap`, `jquery` etc. but it is not required to install bower on your local machines since `npm` installs `bower` as a project dependency. Also `bower install` command is run automatically by `npm` as a post install script.
 
@@ -153,7 +167,8 @@ In addition we've created `npm scripts` to run `gulp tasks` and `gulp` is instal
 
 - `clone` the repository
 - `cd jquery-mobile-seed` to change the directory
-- `npm install` to install the dependencies
+- `npm install` to install npm dependencies
+- `Composer install` to install composer dependencies
 
 ## Running the app
 
@@ -176,7 +191,25 @@ The `gulp` tasks are defined inside the `gulpfile.babel.js` file found on the ro
 
 ## Add third-party dependencies
 
-To use any third party libraries other than the included `jquery-mobile`, `jquery` and `font-awesome` libs, locate the package you want in the [bower package repository](https://bower.io/search/) and use the following command to add it to your project.
+### Composer
+
+To integrate PHP libraries from composer, visite the packge repository website([https://packagist.org/](https://packagist.org/)) and follow the instructions. The command to install the package would generally look loke below. Replace the `$package` with the actual package you want to install.
+
+```bash
+composer require $package
+```
+
+Take a look at the bellow example:
+
+Lets say that you want to integrate `facebook/graph-sdk` to your project. Just run the command bellow.
+
+```bash
+composer require facebook/graph-sdk
+```
+
+### Bower
+
+To use any third party bower libraries other than the included `jquery-mobile`, `jquery` and `font-awesome` libs, locate the package you want in the [bower package repository](https://bower.io/search/) and use the following command to add it to your project.
 
 ```bash
 bower install $package --save
@@ -260,6 +293,7 @@ Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
 # Built With
 
 <a href="https://jquerymobile.com"><img src="./docs/readme-resources/jquery-mobile.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
+<a href="https://getcomposer.org/"><img src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>&nbsp;&nbsp;
 <a href="http://php.net/"><img src="./docs/readme-resources/php.png" alt="npm" height="25" /></a>&nbsp;&nbsp;
 <a href="https://www.npmjs.com/"><img src="./docs/readme-resources/npm.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
 <a href="https://bower.io/"><img src="./docs/readme-resources/bower.svg" alt="bower" height="30" /></a>&nbsp;&nbsp;

@@ -74,7 +74,7 @@
                           tabindex="-1"
                           value=""/>
                       </div>
-                      <button id="mc-embedded-subscribe" class="subscribe-btn" name="subscribe" type="submit">
+                      <button id="mc-embedded-subscribe" class="btn btn-default" name="subscribe" type="submit">
                         <b>Subscribe</b>
                       </button>
                     </div>
