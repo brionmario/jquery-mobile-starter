@@ -84,7 +84,8 @@ const CONFIG = {
       pages: 'temp/pages',
       components: 'temp/components',
       assets: 'temp/assets',
-      fonts: 'temp/assets/fonts'
+      fonts: 'temp/assets/fonts',
+      composer: 'temp/vendor'
     },
     src: {
       root: 'src',
@@ -95,7 +96,8 @@ const CONFIG = {
       index: 'src/index.php',
       assets: 'src/assets',
       fonts: 'src/assets/fonts',
-      bower: 'src/bower_components'
+      bower: 'src/bower_components',
+      composer: 'temp/vendor'
     },
     prod: {
       root: 'dist',
@@ -104,7 +106,8 @@ const CONFIG = {
       pages: 'dist/pages',
       assets: 'dist/assets',
       fonts: 'dist/assets/fonts',
-      components: 'dist/components'
+      components: 'dist/components',
+      composer: 'temp/vendor'
     }
   },
   settings: {
@@ -264,6 +267,16 @@ gulp.task('move:bower:fonts', () => {
     );
 });
 
+gulp.task('move:composer:deps', () => {
+  return gulp
+    .src([`${CONFIG.paths.src.composer}/**/*`], { base: CONFIG.paths.src.root })
+    .pipe(
+      gutil.env.env === 'production'
+        ? gulp.dest(CONFIG.paths.prod.composer)
+        : gulp.dest(CONFIG.paths.dev.composer)
+    );
+});
+
 gulp.task('bundle:bower', () => {
   let target = gulp.src(
     [
@@ -383,6 +396,7 @@ gulp.task('inject', () => {
 gulp.task(
   'build',
   gulp.series(
+    'move:composer:deps',
     'move:assets',
     'move:bower:fonts',
     gulp.parallel('scripts:build', 'styles:build'),
