@@ -39,7 +39,7 @@
           <p>Following is a demonstration of the already included <span class="pre">faker</span> library. Press the generate button to generate a random word.</p>
         </div>
         <div class="faker-demo-container">
-          <h4 id="fake-name">Fake Name</h4>
+          <h4 id="fake-name" class="fake-name">Fake Name</h4>
           <button id="generate-btn" class="btn btn-primary btn-sm">Generate</button>
         </div>
       </div>
