@@ -7,8 +7,8 @@ const inject = require('gulp-inject');
 const gutil = require('gulp-util');
 const imagemin = require('gulp-imagemin');
 const autoprefixer = require('gulp-autoprefixer');
+// const htmlmin = require('gulp-htmlmin');
 const del = require('del');
-const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
 const header = require('gulp-header');
 const cleanCSS = require('gulp-clean-css');
@@ -373,24 +373,26 @@ gulp.task('inject', () => {
     addRootSlash: false
   };
 
-  return target
-    .pipe(
-      gutil.env.env === 'production'
-        ? htmlmin({
-          collapseWhitespace: true
-        })
-        : gutil.noop()
-    )
-    .pipe(
-      gutil.env.env === 'production'
-        ? inject(prodSources, prodInjectionOptions)
-        : inject(devSources, devInjectionOptions)
-    )
-    .pipe(
-      gutil.env.env === 'production'
-        ? gulp.dest(CONFIG.paths.prod.root)
-        : gulp.dest(CONFIG.paths.dev.root)
-    );
+  return (
+    target
+      // .pipe(
+      //   gutil.env.env === 'production'
+      //     ? htmlmin({
+      //       collapseWhitespace: true
+      //     })
+      //     : gutil.noop()
+      // )
+      .pipe(
+        gutil.env.env === 'production'
+          ? inject(prodSources, prodInjectionOptions)
+          : inject(devSources, devInjectionOptions)
+      )
+      .pipe(
+        gutil.env.env === 'production'
+          ? gulp.dest(CONFIG.paths.prod.root)
+          : gulp.dest(CONFIG.paths.dev.root)
+      )
+  );
 });
 
 gulp.task(
