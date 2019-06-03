@@ -40,7 +40,11 @@
   ],
   "jest": {
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "/vendor/",
+      "/src/bower_components/"
+    ]
   },
   "scripts": {
     "build:dev": "npm run clean:temp && gulp build --env=development",
@@ -61,17 +65,10 @@
     "server:prod": "npm run build:prod && gulp serve --env=production",
     "server": "npm run server:dev",
     "start": "npm run server",
-    "test": "jest --testPathIgnorePatterns ./src/vendor && codecov",
+    "test": "jest && codecov",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "watch:dev": "gulp watch",
     "watch": "npm run watch:dev"
-  },
-  "devDependencies": {
-    "all-contributors-cli": "^5.4.0",
-    "codecov": "^3.1.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.0.0",
-    "jest": "^23.5.0"
   },
   "dependencies": {
     "@babel/core": "^7.2.0",
@@ -105,5 +102,12 @@
     "main-bower-files": "^2.13.1",
     "semver": "^5.5.1",
     "wiredep": "^4.0.0"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^5.4.0",
+    "codecov": "^3.1.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "jest": "^23.5.0"
   }
 }
