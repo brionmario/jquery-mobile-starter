@@ -48,7 +48,7 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 
 > The generated project have dependencies that require `Node.js` together with `npm` & `Composer`.
 
-**Install `composer` locally or globally by following the instructions listed [here](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).**
+**Install [Composer](https://getcomposer.org/) locally or globally by following the instructions listed [here](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).**
 
 **Make sure you have [Node](https://nodejs.org/en/download/) version >= 8.0 and [npm](https://www.npmjs.com/) >= 5 or [Yarn](https://yarnpkg.com).**
 
@@ -64,7 +64,7 @@ cd jquery-mobile-seed
 npm install
 
 # install the composer dependencies listed on composer.json
-composer install
+Composer install
 
 # start the development server
 npm start
@@ -82,6 +82,8 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
   - [Running the app](#running-the-app)
 - [Configuration](#configuration)
   - [Add third-party dependencies](#add-third-party-dependencies)
+    - [Composer](#composer)
+    - [Bower](#bower)
 - [Styling](#styling)
 - [Deployment](#deployment)
   - [Heroku](#deploy-to-heroku)
@@ -295,8 +297,8 @@ Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
 <a href="https://www.npmjs.com/"><img src="./docs/readme-resources/npm.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
 <a href="https://bower.io/"><img src="./docs/readme-resources/bower.svg" alt="bower" height="30" /></a>&nbsp;&nbsp;
 <a href="https://sass-lang.com/"><img src="./docs/readme-resources/sass.svg" alt="sass" height="30" /></a>&nbsp;&nbsp;
+<a href="https://getcomposer.org/"><img src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>
 <a href="https://gulpjs.com/"><img style="display:inline-block;margin: 5px 10px" src="./docs/readme-resources/gulp.svg" alt="gulp" height="30" /></a>
-<a href="https://getcomposer.org/"><img style="display:inline-block;margin: 5px 10px" src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>
 
 # Changelog
 
