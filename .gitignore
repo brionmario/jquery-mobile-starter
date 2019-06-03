@@ -2,8 +2,11 @@
 dist
 temp
 
-#Vendor packages
-/src/vendor/
+# Composer packages
+vendor/
+
+# Bower packages
+src/bower_components/
 
 # Optional eslint cache
 .eslintcache
