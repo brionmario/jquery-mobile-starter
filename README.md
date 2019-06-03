@@ -298,7 +298,7 @@ Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
 <a href="https://bower.io/"><img src="./docs/readme-resources/bower.svg" alt="bower" height="30" /></a>&nbsp;&nbsp;
 <a href="https://sass-lang.com/"><img src="./docs/readme-resources/sass.svg" alt="sass" height="30" /></a>&nbsp;&nbsp;
 <a href="https://getcomposer.org/"><img src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>
-<a href="https://gulpjs.com/"><img style="display:inline-block;margin: 5px 10px" src="./docs/readme-resources/gulp.svg" alt="gulp" height="30" /></a>
+<a href="https://gulpjs.com/"><img style="display:inline-block;margin: 5px 15px" src="./docs/readme-resources/gulp.svg" alt="gulp" height="30" /></a>
 
 # Changelog
 
