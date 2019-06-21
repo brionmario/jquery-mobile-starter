@@ -1,28 +1,25 @@
-'use-strict';
-
 import gulp from 'gulp';
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
-const inject = require('gulp-inject');
-const gutil = require('gulp-util');
-const imagemin = require('gulp-imagemin');
-const autoprefixer = require('gulp-autoprefixer');
-// const htmlmin = require('gulp-htmlmin');
-const del = require('del');
-const sass = require('gulp-sass');
-const header = require('gulp-header');
-const cleanCSS = require('gulp-clean-css');
-const rename = require('gulp-rename');
-const sassLint = require('gulp-sass-lint');
-const eslint = require('gulp-eslint');
-const pkg = require('./package.json');
-const browserSync = require('browser-sync');
-const uglify = require('gulp-uglify');
-const sourcemaps = require('gulp-sourcemaps');
-const wiredep = require('wiredep');
-const urlAdjuster = require('gulp-css-url-adjuster');
-const bowerlibs = require('main-bower-files');
-const phpConnect = require('gulp-connect-php');
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
+import inject from 'gulp-inject';
+import gutil from 'gulp-util';
+import imagemin from 'gulp-imagemin';
+import autoprefixer from 'gulp-autoprefixer';
+import del from 'del';
+import sass from 'gulp-sass';
+import header from 'gulp-header';
+import cleanCSS from 'gulp-clean-css';
+import rename from 'gulp-rename';
+import sassLint from 'gulp-sass-lint';
+import eslint from 'gulp-eslint';
+import pkg from './package.json';
+import browserSync from 'browser-sync';
+import uglify from 'gulp-uglify';
+import sourcemaps from 'gulp-sourcemaps';
+import wiredep from 'wiredep';
+import urlAdjuster from 'gulp-css-url-adjuster';
+import bowerlibs from 'main-bower-files';
+import phpConnect from 'gulp-connect-php';
 
 /**
  * Browser Support declaration
@@ -373,26 +370,17 @@ gulp.task('inject', () => {
     addRootSlash: false
   };
 
-  return (
-    target
-      // .pipe(
-      //   gutil.env.env === 'production'
-      //     ? htmlmin({
-      //       collapseWhitespace: true
-      //     })
-      //     : gutil.noop()
-      // )
-      .pipe(
-        gutil.env.env === 'production'
-          ? inject(prodSources, prodInjectionOptions)
-          : inject(devSources, devInjectionOptions)
-      )
-      .pipe(
-        gutil.env.env === 'production'
-          ? gulp.dest(CONFIG.paths.prod.root)
-          : gulp.dest(CONFIG.paths.dev.root)
-      )
-  );
+  return target
+    .pipe(
+      gutil.env.env === 'production'
+        ? inject(prodSources, prodInjectionOptions)
+        : inject(devSources, devInjectionOptions)
+    )
+    .pipe(
+      gutil.env.env === 'production'
+        ? gulp.dest(CONFIG.paths.prod.root)
+        : gulp.dest(CONFIG.paths.dev.root)
+    );
 });
 
 gulp.task(
