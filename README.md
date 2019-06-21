@@ -41,9 +41,6 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 - Ability to use your favorite bower packages.
 - Organized and easy to use folder structure for beginners.
 
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed?ref=badge_large)
-
 # Quick Links
 
 | [Demo](https://jquery-mobile-seed.herokuapp.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/) |
@@ -326,5 +323,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and t
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
 # License
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed?ref=badge_large)
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
