@@ -13,6 +13,9 @@
   <a href="#contributors">
     <img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="All Contributors" height="18">
   </a>
+  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed.svg?type=shield"/>
+  </a>
   <a href="https://david-dm.org/brionmario/jquery-mobile-seed">
     <img src="https://david-dm.org/brionmario/jquery-mobile-seed/status.svg" alt="dependencies Status" height="18">
   </a>
@@ -37,6 +40,9 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 - Easilily integrate your favourite php libraries using [Composer](https://getcomposer.org/).
 - Ability to use your favorite bower packages.
 - Organized and easy to use folder structure for beginners.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed?ref=badge_large)
 
 # Quick Links
 
