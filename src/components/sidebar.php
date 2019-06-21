@@ -4,7 +4,20 @@
       <img src="../assets/img/logo_aparecium_text_only_inverted.svg" width="150px" alt="Logo">
     </a>
   </div>
-  <div class="sidebar-content">
-    <img src="assets/img/hints/sidebar.png" class="hint">
-  </div>
+    <div data-role="navbar" class="navbar">
+      <ul>
+        <li class="nav-link">
+          <a href="./index.php" rel="external">
+            <i class="fa fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-link">
+          <a href="./composer-demo.php" rel="external">
+            <i class="fa fa-dropbox"></i>
+              Composer Demo
+          </a>
+        </li>
+      </ul>
+    </div><!-- /navbar -->
 </div>

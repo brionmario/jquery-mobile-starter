@@ -14,25 +14,25 @@
       display: inline-block;
       height: 35px;
       line-height: 33px;
-      transition: all .2s;
+      transition: all 0.2s;
       border-radius: 40px;
       text-align: center;
       width: 35px;
-      &[class*="facebook"] {
+      &[class*='facebook'] {
         color: $facebook-icon-color;
         border-color: $facebook-icon-color;
         &:hover {
           color: lighten($facebook-icon-color, 10);
         }
       }
-      &[class*="twitter"] {
+      &[class*='twitter'] {
         color: $twitter-icon-color;
         border-color: $twitter-icon-color;
         &:hover {
           color: lighten($twitter-icon-color, 10);
         }
       }
-      &[class*="github"] {
+      &[class*='github'] {
         color: $github-icon-color;
         border-color: $github-icon-color;
         &:hover {
@@ -65,4 +65,3 @@
     border: unset !important;
   }
 }
-
