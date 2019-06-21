@@ -149,7 +149,7 @@ What you need to run this app:
 
 - The generated project have dependencies that require `Node.js` together with `npm` and `Composer`.
 
-> Make sure you have `Node.js`, `npm` & `Composer` installed by running simple commands on the command line and see if you're running the latest stable versions.
+> Make sure you have `Node.js`, `npm` & `Composer` installed by running the following simple commands on the command line and see if you're running the latest stable versions.
 
 - Node.js - Type `node -v` on the terminal.
 - npm - Type `npm -v` on the terminal.
