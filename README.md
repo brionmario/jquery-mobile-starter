@@ -13,9 +13,6 @@
   <a href="#contributors">
     <img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="All Contributors" height="18">
   </a>
-  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed?ref=badge_shield" alt="FOSSA Status">
-    <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed.svg?type=shield"/>
-  </a>
   <a href="https://david-dm.org/brionmario/jquery-mobile-seed">
     <img src="https://david-dm.org/brionmario/jquery-mobile-seed/status.svg" alt="dependencies Status" height="18">
   </a>
@@ -323,7 +320,5 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and t
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
 # License
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbrionmario%2Fjquery-mobile-seed?ref=badge_large)
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
