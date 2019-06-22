@@ -314,6 +314,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and t
 <!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/brionmario/jquery-mobile-seed/commits?author=brionmario "Code") [📖](https://github.com/brionmario/jquery-mobile-seed/commits?author=brionmario "Documentation") [🐛](https://github.com/brionmario/jquery-mobile-seed/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/brionmario/jquery-mobile-seed/commits?author=brionmario "Tests") |
 | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
