@@ -1,12 +1,12 @@
-<p align="center">
-    <img style="display:block;text-align:center" src="./docs/logo/jquery-mobile-starter.svg" alt="logo-text" width="200" />
+<p align="left">
+    <img src="./docs/logo/jquery-mobile-starter.svg" alt="logo-text" width="200" />
     <br/>
-    <h1 align="center">jQuery Mobile Starter</h1>
-    <p align="center" style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development</p>
+    <h1>jQuery Mobile Starter</h1>
+    <p style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development</p>
 </p>
 
 <!-- Badges -->
-<p align="center">
+<p align="left">
   <a href="https://travis-ci.org/brionmario/jquery-mobile-starter">
     <img src="https://travis-ci.org/brionmario/jquery-mobile-starter.svg?branch=master" alt="Build Status" height="18">
   </a>
