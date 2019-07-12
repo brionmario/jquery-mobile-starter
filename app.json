@@ -1,8 +1,8 @@
 {
-  "name": "jQuery Mobile Seed by Aparecium Labs",
+  "name": "jQuery Mobile Starter by Aparecium Labs",
   "description": "A quick start kit for jQuery Mobile Framework based website development with SASS support",
-  "repository": "https://github.com/brionmario/jquery-mobile-seed",
-  "logo": "https://raw.githubusercontent.com/brionmario/jquery-mobile-seed/master/docs/readme-resources/jquery-mobile-seed.svg?sanitize=true",
+  "repository": "https://github.com/brionmario/jquery-mobile-starter",
+  "logo": "https://raw.githubusercontent.com/brionmario/jquery-mobile-starter/master/docs/readme-resources/jquery-mobile-starter.svg?sanitize=true",
   "keywords": [
     "jquery",
     "jquery-mobile",
@@ -13,6 +13,7 @@
     "sass",
     "responsive",
     "apareciumlabs",
+    "starter",
     "seed"
   ]
 }

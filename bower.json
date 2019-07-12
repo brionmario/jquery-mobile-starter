@@ -1,10 +1,8 @@
 {
-  "name": "jquery-mobile-seed",
+  "name": "jquery-mobile-starter",
   "description": "A quick start kit for jQuery Mobile Framework based website development with SASS support",
   "main": "",
-  "authors": [
-    "Brion Mario"
-  ],
+  "authors": ["Brion Mario"],
   "license": "MIT",
   "keywords": [
     "jquery",
@@ -16,17 +14,12 @@
     "sass",
     "responsive",
     "apareciumlabs",
+    "starter",
     "seed"
   ],
-  "homepage": "https://github.com/apareciumlabs/jquery-mobile-seed",
+  "homepage": "https://github.com/brionmario/jquery-mobile-starter",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "jquery": "1.11.1",
     "font-awesome": "~4.4.0",
@@ -46,10 +39,7 @@
       ]
     },
     "jquery-mobile": {
-      "main": [
-        "dist/jquery.mobile.min.css",
-        "dist/jquery.mobile.min.js"
-      ]
+      "main": ["dist/jquery.mobile.min.css", "dist/jquery.mobile.min.js"]
     }
   }
 }

@@ -1,4 +1,4 @@
-# Contributing to jQuery Mobile Seed
+# Contributing to jQuery Mobile Starter
 
 As a contributor, here are the guidelines we would like you to follow:
 
