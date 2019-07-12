@@ -1,29 +1,29 @@
-<p align="center">
-    <img style="display:block;text-align:center" src="./docs/readme-resources/jquery-mobile-seed.svg" alt="logo-text" width="300" />
+<p align="left">
+    <img src="./docs/logo/jquery-mobile-starter.svg" alt="logo-text" width="200" />
     <br/>
-    <h1 align="center">jQuery Mobile Seed</h1>
-    <p align="center" style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development</p>
+    <h1>jQuery Mobile Starter</h1>
+    <p style="font-size: 1.2rem;">A quick start kit for jQuery Mobile Framework based website development</p>
 </p>
 
 <!-- Badges -->
-<p align="center">
-  <a href="https://travis-ci.org/brionmario/jquery-mobile-seed">
-    <img src="https://travis-ci.org/brionmario/jquery-mobile-seed.svg?branch=master" alt="Build Status" height="18">
+<p align="left">
+  <a href="https://travis-ci.org/brionmario/jquery-mobile-starter">
+    <img src="https://travis-ci.org/brionmario/jquery-mobile-starter.svg?branch=master" alt="Build Status" height="18">
   </a>
   <a href="#contributors">
     <img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="All Contributors" height="18">
   </a>
-  <a href="https://david-dm.org/brionmario/jquery-mobile-seed">
-    <img src="https://david-dm.org/brionmario/jquery-mobile-seed/status.svg" alt="dependencies Status" height="18">
+  <a href="https://david-dm.org/brionmario/jquery-mobile-starter">
+    <img src="https://david-dm.org/brionmario/jquery-mobile-starter/status.svg" alt="dependencies Status" height="18">
   </a>
-  <a href="https://david-dm.org/brionmario/jquery-mobile-seed?type=dev">
-    <img src="https://david-dm.org/brionmario/jquery-mobile-seed/dev-status.svg" alt="devDependencies Status" height="18">
+  <a href="https://david-dm.org/brionmario/jquery-mobile-starter?type=dev">
+    <img src="https://david-dm.org/brionmario/jquery-mobile-starter/dev-status.svg" alt="devDependencies Status" height="18">
    </a>
   <a href="LICENSE.md">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" height="18">
   </a>
-  <a href="https://codecov.io/gh/brionmario/jquery-mobile-seed">
-  <img src="https://codecov.io/gh/brionmario/jquery-mobile-seed/branch/master/graph/badge.svg" />
+  <a href="https://codecov.io/gh/brionmario/jquery-mobile-starter">
+  <img src="https://codecov.io/gh/brionmario/jquery-mobile-starter/branch/master/graph/badge.svg" />
 </a>
 </p>
 
@@ -40,8 +40,8 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 
 # Quick Links
 
-| [Demo](https://jquery-mobile-seed.herokuapp.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/) |
-| ------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| [Demo](https://jquery-mobile-starter.herokuapp.com/) | [Documentation](http://demos.jquerymobile.com/1.4.5/) | [Theme Roller](https://themeroller.jquerymobile.com/) |
+| ---------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 
 
 # Quick start
@@ -55,10 +55,10 @@ This repository could be used by anyone who's looking for a quick starter kit fo
 ```bash
 # clone our repository
 # --depth 1 removes all but one .git commit history
-git clone --depth 1 https://github.com/brionmario/jquery-mobile-seed.git
+git clone --depth 1 https://github.com/brionmario/jquery-mobile-starter.git
 
 # change the directory
-cd jquery-mobile-seed
+cd jquery-mobile-starter
 
 # install the npm dependencies listed on package.json
 npm install
@@ -95,7 +95,7 @@ Once the dev server is fired up, it'll automatically open up a new tab. If not, 
 # File Structure
 
 ```
-jquery-mobile-seed/
+jquery-mobile-starter/
  ├── coverage/                      * unit test coverage reports
  ├── dev/                           * stores development build artifacts
  ├── dist                           * stores production build artifacts
@@ -166,7 +166,7 @@ In addition we've created `npm scripts` to run `gulp tasks` and `gulp` is instal
 ## Setting Up
 
 - `clone` the repository
-- `cd jquery-mobile-seed` to change the directory
+- `cd jquery-mobile-starter` to change the directory
 - `npm install` to install npm dependencies
 - `Composer install` to install composer dependencies
 
@@ -284,7 +284,7 @@ npm run build
 
 Deploy to [Heroku](https://www.heroku.com/) using this template with one single click. Heroku has an awesome free and it is extremely easy to use.
 
-Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
+Click [here](https://jquery-mobile-starter.herokuapp.com/) to see the deployed app.
 
 <!-- Markdown snippet -->
 
@@ -292,13 +292,27 @@ Click [here](https://jquery-mobile-seed.herokuapp.com/) to see the deployed app.
 
 # Built With
 
-<a href="https://jquerymobile.com"><img src="./docs/readme-resources/jquery-mobile.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
-<a href="https://getcomposer.org/"><img src="./docs/readme-resources/composer.svg" alt="Composer" height="30" /></a>&nbsp;&nbsp;
-<a href="http://php.net/"><img src="./docs/readme-resources/php.png" alt="npm" height="25" /></a>&nbsp;&nbsp;
-<a href="https://www.npmjs.com/"><img src="./docs/readme-resources/npm.svg" alt="npm" height="20" /></a>&nbsp;&nbsp;
-<a href="https://bower.io/"><img src="./docs/readme-resources/bower.svg" alt="bower" height="30" /></a>&nbsp;&nbsp;
-<a href="https://sass-lang.com/"><img src="./docs/readme-resources/sass.svg" alt="sass" height="30" /></a>&nbsp;&nbsp;
-<a href="https://gulpjs.com/"><img style="display:inline-block;margin: 5px 10px" src="./docs/readme-resources/gulp.svg" alt="gulp" height="30" /></a>
+<a href="https://jquerymobile.com">
+  <img src="./docs/readme-resources/technologies/jquery-mobile.svg" alt="npm" height="20" />
+</a>&nbsp;&nbsp;
+<a href="https://getcomposer.org/">
+  <img src="./docs/readme-resources/technologies/composer.svg" alt="Composer" height="30" />
+</a>&nbsp;&nbsp;
+<a href="http://php.net/">
+  <img src="./docs/readme-resources/technologies/php.png" alt="npm" height="25" />
+</a>&nbsp;&nbsp;
+<a href="https://www.npmjs.com/">
+  <img src="./docs/readme-resources/technologies/npm.svg" alt="npm" height="20" />
+</a>&nbsp;&nbsp;
+<a href="https://bower.io/">
+  <img src="./docs/readme-resources/technologies/bower.svg" alt="bower" height="30" />
+</a>&nbsp;&nbsp;
+<a href="https://sass-lang.com/">
+  <img src="./docs/readme-resources/technologies/sass.svg" alt="sass" height="30" />
+</a>&nbsp;&nbsp;
+<a href="https://gulpjs.com/">
+  <img style="display:inline-block;margin: 5px 10px" src="./docs/readme-resources/technologies/gulp.svg" alt="gulp" height="30" />
+</a>
 
 # Changelog
 
@@ -312,7 +326,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and t
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/brionmario/jquery-mobile-seed/commits?author=brionmario "Code") [📖](https://github.com/brionmario/jquery-mobile-seed/commits?author=brionmario "Documentation") [🐛](https://github.com/brionmario/jquery-mobile-seed/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/brionmario/jquery-mobile-seed/commits?author=brionmario "Tests") |
+| [<img src="https://avatars3.githubusercontent.com/u/25959096?v=4" width="80px;"/><br /><sub><b>Brion Mario</b></sub>](http://www.brionmario.com/)<br />[💻](https://github.com/brionmario/jquery-mobile-starter/commits?author=brionmario "Code") [📖](https://github.com/brionmario/jquery-mobile-starter/commits?author=brionmario "Documentation") [🐛](https://github.com/brionmario/jquery-mobile-starter/issues?q=author%3Abrionmario "Bug reports") [⚠️](https://github.com/brionmario/jquery-mobile-starter/commits?author=brionmario "Tests") |
 | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
