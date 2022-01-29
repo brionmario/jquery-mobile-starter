@@ -13,12 +13,6 @@
   <a href="#contributors">
     <img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="All Contributors" height="18">
   </a>
-  <a href="https://david-dm.org/brionmario/jquery-mobile-starter">
-    <img src="https://david-dm.org/brionmario/jquery-mobile-starter/status.svg" alt="dependencies Status" height="18">
-  </a>
-  <a href="https://david-dm.org/brionmario/jquery-mobile-starter?type=dev">
-    <img src="https://david-dm.org/brionmario/jquery-mobile-starter/dev-status.svg" alt="devDependencies Status" height="18">
-   </a>
   <a href="LICENSE.md">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" height="18">
   </a>
